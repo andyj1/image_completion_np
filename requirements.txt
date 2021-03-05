@@ -1,4 +1,5 @@
 matplotlib
+scikit-learn
 numpy
 torch
 torchvision

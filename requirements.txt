@@ -3,4 +3,5 @@ scikit-learn
 numpy
 torch
 torchvision
+dotmap
 tqdm

@@ -92,7 +92,7 @@ class NPTrainer(object):
                         print('[ERROR] (train mode, but test mode loss output) loss error:', loss)
                         
                     # update progress bar
-                    t_iter.set_description('iter: %d/%d / loss: %.3f' % (iter,n_iter,(epoch_loss/int(iter+1))))
+                    t_iter.set_description('iter: %d/%d / loss: %.3f' % (iter+1,n_iter,(epoch_loss/int(iter+1))))
                     
                     ''' evaluate '''
                     if iter % test_for_every == 0: # train mode
@@ -106,7 +106,7 @@ class NPTrainer(object):
                         params.batch_size = batch_size
                         params.epoch = epoch
                         params.iter = iter
-                        params.save_path = f'./fig/latent/latent (batch: {batch_size}, r: {self.model.r_dim}, z: {self.model.z_dim})'
+                        params.save_path = f'./fig/latent/latent_(batch_{batch_size}, r_{self.model.r_dim}, z_{self.model.z_dim}).png'
                         # params.save_path = f'./fig/latent/latent_epoch_{epoch}_iter_{iter}.png'
                         # params.save_path = f'./fig/latent/latent_epoch_0_bsz300.png'
                         # params.save_path = f'./fig/latent/_latent_bsz_{batch_size}_r_{self.model.r_dim}_z_{self.model.z_dim}.png'

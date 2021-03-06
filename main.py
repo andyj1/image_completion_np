@@ -13,6 +13,11 @@ import datasets
 import trainer
 from model import NeuralProcess
 
+from six.moves import urllib
+opener = urllib.request.build_opener()
+opener.addheaders = [('User-agent', 'Mozilla/5.0')]
+urllib.request.install_opener(opener)
+
 if __name__ == "__main__":
 
     # prepare figure directory

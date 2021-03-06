@@ -16,7 +16,7 @@ def visualize_latent(tsne, context_mu, batch_label, ax, params):
     ax.set_ylabel('t-sne axis 2')
     ax.set_xlim([0,1])
     ax.set_ylim([0,1])
-    ax.set_title(params.save_path)
+    ax.set_title(params.save_path[:-4])
     # plt.axis("off")
     # plt.legend(loc='best', markerscale=0.5, scatterpoints=1, fontsize=10)
     plt.savefig(params.save_path)
